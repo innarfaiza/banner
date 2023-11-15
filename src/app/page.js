@@ -1,95 +1,69 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import "./globals.css";
 
 export default function Home() {
+  const [input, setInput] = useState("");
+  const [nama, setNama] = useState("Innar Faiza Syahrani");
+
+  // function button input
+  const boxGantiNama = () => {
+    setNama(input);
+  };
+
+  const boxInputNama = (val) => {
+    setInput(val);
+  };
+
+  function button(e) {
+    if (e.code === "Enter") boxGantiNama();
+  }
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <div className="body">
+      <div className="container">
+        <div className="header-banner">
+          <div className="profil-header-banner">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              src="/assets/foto.png"
+              alt="gambar profile"
+              fill
+              objectFit="contain"
             />
-          </a>
+          </div>
+          <div className="nama">
+            <h1>{nama}</h1>
+            <div className="nim-profile">
+              <p>D121211021</p>
+              <p>Lovyu brodi</p>
+            </div>
+          </div>
+        </div>
+        <div className="input-nama">
+          {/* membuat button untuk input fields */}
+          <input
+            className="input"
+            style={{ marginTop: "12px" }}
+            placeholder="Masukkan nama..."
+            onInput={(val) => boxInputNama(val.target.value)}
+            onKeyDown={(value) => {
+              button(value);
+            }}
+          />
+          <button
+            className="cta-button"
+            style={{
+              marginTop: "12px",
+            }}
+            onClick={() => {
+              boxGantiNama();
+            }}
+          >
+            <p>Ubah Nama</p>
+          </button>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
