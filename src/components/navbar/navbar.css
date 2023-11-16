@@ -1,0 +1,17 @@
+.navbar-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: 12px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.default {
+    color: grey;
+}
+
+.active {
+    color: black;
+}
