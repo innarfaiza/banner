@@ -41,7 +41,7 @@ export default function Diary() {
           ))}
         </ul>
       ) : (
-        "API not loading"
+        "API loading..."
       )}
     </div>
   );

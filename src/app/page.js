@@ -7,6 +7,7 @@ import "@styles/home.css";
 export default function Home() {
   const [input, setInput] = useState("");
   const [nama, setNama] = useState("Innar Faiza Syahrani");
+  const [empty, setEmpty] = useState(true);
 
   // function button input
   const boxGantiNama = () => {
@@ -15,11 +16,41 @@ export default function Home() {
 
   const boxInputNama = (val) => {
     setInput(val);
+    setEmpty(val.trim() === '');
   };
 
   function button(e) {
     if (e.code === "Enter") boxGantiNama();
   }
+
+  let content;
+  if (empty) {
+    content = (
+      <button
+        className="cta"
+        style={{
+          marginTop: "12px",
+        }}
+      >
+        <p>Disabled</p>
+      </button>
+    );
+  } else {
+    content = (
+      <button
+        className="cta-button"
+        style={{
+          marginTop: "12px",
+        }}
+        onClick={() => {
+          boxInputNama();
+        }}
+      >
+        <p>Change Name</p>
+      </button>
+    );
+  }
+
   return (
     <div className="body">
       <div className="container">
@@ -51,17 +82,7 @@ export default function Home() {
               button(value);
             }}
           />
-          <button
-            className="cta-button"
-            style={{
-              marginTop: "12px",
-            }}
-            onClick={() => {
-              boxGantiNama();
-            }}
-          >
-            <p>Ubah Nama</p>
-          </button>
+          {content}
         </div>
       </div>
     </div>
