@@ -35,8 +35,7 @@ export default function Home() {
           <div className="nama">
             <h1>{nama}</h1>
             <div className="nim-profile">
-              
-              <p>Halo D121211021</p>
+              <p>tes D121211021</p>
               <p>Lovyu brodi</p>
             </div>
           </div>
