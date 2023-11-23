@@ -35,3 +35,20 @@ ul{
 li{
     list-style-type: none;
 }
+
+.cta{
+  display: flex;
+  width: 394px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 12px;
+  background: #D3d3d3;
+}
+
+.cta p{
+  font-size: 700;
+  font-weight: 600;
+}
