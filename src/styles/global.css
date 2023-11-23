@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: Plus Jakarta Sans;
 }
 
 body{
@@ -12,11 +13,14 @@ body{
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  row-gap: 24px;
   align-items: center;
+  padding-top: 50px;
 
+  overflow-x: hidden;
   width: 100vw;
-  height: 100vh;
+  height: 100vh; 
 }
 
 
