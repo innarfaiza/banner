@@ -1,3 +1,8 @@
+.body {
+  margin-bottom: 15px;
+}
+  
+
 .diary-container {
     display: flex;
     width: 442px;
@@ -8,7 +13,11 @@
 
     border-radius: 24px;
     background: #FFF;
-    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+}
+
+.diary-container h1 {
+  color: #1E1E1E;
 }
 
 .p-diary{
@@ -36,7 +45,30 @@ li{
     list-style-type: none;
 }
 
-.cta{
+.input-nama{
+  width: 100%;
+}
+
+.inputisi {
+  margin-bottom: 10px;
+}
+
+input{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  flex-shrink: 0;
+
+  border-radius: 15px;
+  border: 1px solid #CFB997;
+}
+
+.cta-button-disabled {
   display: flex;
   width: 394px;
   padding: 10px;
@@ -45,10 +77,30 @@ li{
   gap: 10px;
 
   border-radius: 12px;
-  background: #D3d3d3;
+  background: #e5e5e5;
+  border: 1px solid #eddcd2;
 }
 
-.cta p{
-  font-size: 700;
-  font-weight: 600;
+.cta-button-disabled p{
+  font-size: 600;
+  font-weight: 200;
 }
+
+.cta-button {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 15px;
+  background: #eddcd2;
+}
+
+.cta-button p{
+  font-size: 600;
+  font-weight: 200;
+}
+
+

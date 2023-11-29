@@ -3,6 +3,7 @@
 import "@components/navbar/navbar.css"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import "@styles/home.css";
 
 const Navbar = () => {
     const pathname = usePathname()

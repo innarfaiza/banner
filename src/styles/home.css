@@ -29,8 +29,8 @@ p{
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+  background-color: #fff;
   flex-shrink: 0;
-  background-color: white;
   border-radius: 24px;
 }
 
@@ -67,24 +67,7 @@ p{
   flex-shrink: 0;
 
   border-radius: 15px;
-  border: 1px solid #CFB997;
-}
-
-.cta-button{
-  display: flex;
-  width: 100%;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-
-  border-radius: 15px;
-  background: #CFB997;
-}
-
-.cta-button p{
-  font-size: 700;
-  font-weight: 600;
+  border: 1px solid #eddcd2;
 }
 
 .cta{
@@ -96,10 +79,32 @@ p{
   gap: 10px;
 
   border-radius: 12px;
-  background: #D3d3d3;
+  background: #e5e5e5;
+  border: 1px solid #eddcd2;
 }
 
 .cta p{
-  font-size: 700;
-  font-weight: 600;
+  font-size: 600;
+  font-weight: 200;
+}
+
+.cta-button{
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 15px;
+  background: #eddcd2;
+}
+
+.cta-button p{
+  font-size: 600;
+  font-weight: 200;
+}
+
+.navbar-container {
+  border-radius: 30px;
 }
